@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>QuiZ 1.0</title>
+    <link rel="stylesheet" href="assets\onepage\css\login\reset_login.css">
+    <link rel="stylesheet" href="assets\onepage\css\login\style_login.css">
+    <script src="assets\onepage\scripts/prefixfree.min.js"></script>
+    <script>
+    function loginValidate(){
+        var uid = document.loginQuiz.uId.value;
+        var pass = document.loginQuiz.pass.value;
+      
+        if (uid == "admin" && pass == "root") {
+        	window.location.href = 'quiz.html';
+        	alert("success !");           
+        }
+        else{
+        	alert("Error username or password")
+        }
+        
+    }
+    </script>
+
+</head>
+
+<body>
+
+  <div id="login">
+  <form id="login_form" name="loginQuiz">
+    
+    <div class="field_container">
+      <input type="text" placeholder="Email Address" name="uId" >
+    </div>
+    <br>
+    
+    <div class="field_container">
+      <input type="Password" placeholder="Password" name="pass">
+    </div>
+    <br>
+    
+    <div> 
+        <button id="sign_in_button" onclick="loginValidate()">
+            <span class="button_text">Sign In</span>
+          </button>
+    </div>
+
+   
+</form>
+</div>
+
+</body>
+
+</html>
