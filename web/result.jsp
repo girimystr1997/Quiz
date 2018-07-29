@@ -64,7 +64,7 @@
                                                 try {
                                                    //to be changed
                                                     Class.forName("com.mysql.jdbc.Driver").newInstance();
-                                                    Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/iplab", "root", "");
+                                                    Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/quiz", "root", "");
                                                     Statement state = connect.createStatement();
                                                     if (!connect.isClosed()) {
 
